@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mt-5 mx-auto" style="margin-bottom: 20px; width: 75%;">
+        <form>
+            <div style="display: flex; flex-wrap: nowrap; gap: 10px;">
+                <input class="form-control" name="search" placeholder="search">
+                <input type="submit" class="btn btn-primary " value="Search">
+            </div>
+        </form>
+        <ul class="list-group">
+            {% for name in rows %}
+                <p class="mx-auto mt-3">{{ name }}</p>
+            {% endfor %}
+        </ul>
+    </div>
+    {% for post in posts %}
+        <div class="card mx-auto" style="width: 75%; padding: 1em; margin-bottom: 20px;">
+            <h3 class="card-title">{{ post.title }}</h3>
+            <p>{{ post.date_posted }}</p>
+            <p id="content">{{ post.content }}</p>
+            <a href="/posts/{{ post.id }}" class="btn btn-primary" style="width: 50%;">Read Post</a>
+        </div>
+    {% endfor %}
+{% endblock %}
+{% block extra_script %}
+<script>
+    function getSnippet(content) {
+        return content.substring(0, 64);
+    }
+
+    og_content = document.getElementById('content').innerHTML;
+    document.getElementById('content').innerHTML = getSnippet(og_content) + '...';
+</script>
+{% endblock %}

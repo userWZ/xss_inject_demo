@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HACKER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="data:image/x-icon;base64,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">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%">
+    <div class="container">
+        <img width="50" height="50" src="https://img.icons8.com/quill/50/hacker.png" alt="hacker" style="margin-right: 10px"/>
+        <a class="navbar-brand" href="{% url 'home' %}">HACKER</a>
+        {#        Enterprise Data Center#}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Insecure reading for all...</a>
+
+                </li>
+                {#                <li class="nav-item">#}
+                {#                    <a class="nav-link" href="#">Learn</a>#}
+                {#                </li>#}
+            </ul>
+            <ul class="navbar-nav ml-auto">
+
+
+                {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">User Info</a>
+                            <a class="dropdown-item" href="#">Edit Password</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="{% url 'logout' %}">logout</a>
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="{% url 'login' %}" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            Login
+                        </a>
+
+                    </li>
+                    {#                <li class="nav-item dropdown">#}
+                    {#                    <a class="nav-link" href="{% url 'signup' %}" role="button"#}
+                    {#                        aria-haspopup="true" aria-expanded="false">#}
+                    {#                        Sign Up#}
+                    {#                    </a>#}
+                    {##}
+                    {#                </li>#}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+{#  <header class="text-center mt-3 mb-5">#}
+{#      <div style="border-bottom: 1px slategray solid">#}
+{#    <h1 style="">Hacker Blog</h1>#}
+{#    <span>Insecure reading for all...</span>#}
+{#          {% if user.is_authenticated %}#}
+{#              <div style="float: right">#}
+{#        <span style="text-align: right">{{ user.username }}</span>#}
+{#        <a href="{% url 'logout' %}">Logout</a>#}
+{#      {% else %}#}
+{#        <a href="{% url 'login' %}">Login</a>#}
+{#        <a href="{% url 'signup' %}">Sign Up</a>#}
+{#      {% endif %}#}
+{##}
+{##}
+{##}
+{#         </div>#}
+{#      </div>#}
+
+
+{#  </header>#}
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+{#  <script src="{% static 'home/script.js' %}"></script>#}
+{% block extra_script %}{% endblock %}
+</body>
+</html>

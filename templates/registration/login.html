@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mx-auto" style="width: 30%; padding: 1em; margin: 100px auto">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">login</button>
+    </form>
+</div>
+{% endblock %}

